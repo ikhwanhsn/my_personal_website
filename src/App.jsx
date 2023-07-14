@@ -1,7 +1,7 @@
 function App() {
 
   return (
-    <div className="text-center">
+    <div className="text-center ">
       <h1 className="mt-24 mb-8 text-3xl font-bold">
         Template Vite (React + Tailwind)
       </h1>

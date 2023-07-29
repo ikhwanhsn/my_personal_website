@@ -5,8 +5,31 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
 const Portofolio = () => {
+    const dataImage = [
+        {
+            id: 1,
+            src: porto1,
+            alt: 'image 1',
+            project: 'WhatsApp Clone',
+            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet cumque velit eos temporibus mollitia beatae perspiciatis numquam, quis maxime nihil! Neque, corporis at. Dolor quis culpa quos, ipsa soluta atque',
+            tech: ['html', 'css', 'javascript', 'tailwind', 'react'],
+            github: '',
+            live: '',
+        },
+        {
+            id: 2,
+            src: porto1,
+            alt: 'image 2'
+        },
+        {
+            id: 3,
+            src: porto1,
+            alt: 'image 3'
+        },
+    ]
+
     return ( 
-        <div className="h-screen pt-24 text-center text-color-one mx-7">
+        <div className="h-full pt-24 text-center text-color-one mx-7" id="portofolio">
             <div className="">
                 <h1 className="text-4xl font-bold drop-shadow-lg">My Portofolio</h1>
                 {/* <div className="">
@@ -42,16 +65,12 @@ const Portofolio = () => {
                     </div>
                 </div> */}
                 <div className="shadow-lg mt-7 shadow-[rgba(0,0,0,.1)]">
-                    <Splide aria-label="My Favorite Images">
-                        <SplideSlide>
-                            <img src={porto1} alt="Image 1"/>
+                    <Splide aria-label="My Portofolio">
+                        {dataImage?.map((item) => {
+                            return <SplideSlide key={item.id}>
+                            <img src={item.src} alt={item.alt}/>
                         </SplideSlide>
-                        <SplideSlide>
-                            <img src={porto1} alt="Image 1"/>
-                        </SplideSlide>
-                        <SplideSlide>
-                            <img src={porto1} alt="Image 1"/>
-                        </SplideSlide>
+                        })}
                     </Splide>
                 </div>
                 {/* <div className="w-full mt-5 rounded-lg shadow-lg h-80 shadow-color-two bg-color-one"></div> */}

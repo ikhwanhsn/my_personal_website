@@ -3,7 +3,7 @@ import SkillsIcon from '../components/SkillsIcon';
 
 const Skills = () => {
     return ( 
-        <div className="text-center">
+        <div className="pt-24 text-center" id='skills'>
             <div className="mx-7">
                 <h1 className="text-4xl font-bold text-color-one drop-shadow-lg">My Skills</h1>
                 <div className="grid grid-cols-4 px-5 mt-8 border-4 rounded-md shadow-lg gap-x-5 gap-y-12 py-9 text-color-one bg-color-four border-color-one shadow-[rgba(0,0,0,.2)]">

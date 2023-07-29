@@ -9,7 +9,7 @@ const Navbar = () => {
     };
 
     return ( 
-        <div className="">
+        <div className="" id='about'>
             <div className="fixed top-0 z-30 flex items-center justify-between w-full h-16 py-2 shadow-lg shadow-[rgba(0,0,0,.1)] bg-color-four text-color-one">
                 <div className="relative z-30 flex items-center gap-4 ml-5 cursor-pointer">
                     <FaLaptopCode className='scale-[1.7] hover:scale-[1.8] drop-shadow-md transition-all'/>
@@ -30,13 +30,13 @@ const Navbar = () => {
                         {/* this hidden checkbox controls the state */}
                         <input type="checkbox"  onClick={handleToggleMenu}/>
                         {/* hamburger icon */}
-                        <svg className="fill-current swap-off" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+                        <svg className={`fill-current swap-off`} xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
                         {/* close icon */}
                         <svg className="fill-current swap-on" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
                     </label>
                 </div>
             </div>
-            <div className={`absolute w-full pt-5 pb-8 leading-9 text-center bg-color-four shadow-md ${isOpen?'top-16':'-top-64'} text-color-one transition-all ease-in-out duration-500 z-10`}>
+            <div className={`fixed w-full pt-5 pb-8 leading-9 text-center bg-color-four shadow-md ${isOpen?'top-16':'-top-64'} text-color-one transition-all ease-in-out duration-500 z-10`}>
                 <ul>
                     <li><a href="#about" className='text-xl font-bold transition-all hover:text-color-two'>About</a></li>
                     <li><a href="#skills" className='text-xl font-bold transition-all hover:text-color-two'>Skills</a></li>

@@ -10,13 +10,13 @@ const Navbar = () => {
 
     return ( 
         <div className="">
-            <div className="fixed top-0 z-30 flex items-center justify-between w-full h-16 py-2 shadow-lg bg-color-four text-color-one">
+            <div className="fixed top-0 z-30 flex items-center justify-between w-full h-16 py-2 shadow-lg shadow-[rgba(0,0,0,.1)] bg-color-four text-color-one">
                 <div className="relative z-30 flex items-center gap-4 ml-5 cursor-pointer">
-                    <FaLaptopCode className='scale-[1.7] hover:scale-[1.9]'/>
-                    <h1 className="text-2xl font-bold"><a href="/">Ikhwan Dev</a></h1>
+                    <FaLaptopCode className='scale-[1.7] hover:scale-[1.8] drop-shadow-md transition-all'/>
+                    <h1 className="text-2xl font-bold drop-shadow-md"><a href="/">Ikhwan Dev</a></h1>
                 </div>
-                <div className="absolute z-30 scale-[.7] top-3 right-14 hover:text-color-tree transition-all">
-                    <label className="swap swap-rotate">
+                <div className="absolute z-30 scale-[.7] top-3 right-14 hover:text-color-two transition-all">
+                    <label className="swap swap-rotate drop-shadow-lg">
                         {/* this hidden checkbox controls the state */}
                         <input type="checkbox" />
                         {/* sun icon */}
@@ -25,7 +25,7 @@ const Navbar = () => {
                         <svg className="w-10 h-10 fill-current swap-off" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
                     </label>
                 </div>
-                <div className="mr-2 scale-[.8] md:hidden hover:text-color-tree transition-all relative z-30">
+                <div className="mr-2 scale-[.8] md:hidden hover:text-color-two transition-all relative z-30">
                     <label className="scale-125 border-none bg-color-four btn btn-circle swap swap-rotate text-color-one">  
                         {/* this hidden checkbox controls the state */}
                         <input type="checkbox"  onClick={handleToggleMenu}/>

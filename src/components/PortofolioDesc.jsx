@@ -1,19 +1,19 @@
 import { TbArrowUpRight, TbBrandCss3, TbBrandGithub, TbBrandHtml5, TbBrandJavascript, TbBrandReact, TbBrandTailwind } from "react-icons/tb";
 import SkillsIcon from "./SkillsIcon";
 
-const PortofolioDesc = ({title, desc, github, live}) => {
+const PortofolioDesc = ({title, desc, github, live, tech}) => {
     return ( 
         <div className="">
-            <div className={`flex flex-col mt-9 text-left`}>
+            <div className={`flex flex-col mt-9 text-left lg:w-1/2 lg:float-right lg:pl-5 lg:mt-28 lg:pr-3`}>
                 <h2 className="mb-2 text-2xl font-bold">{title}</h2>
                 <p className="w-full h-32">{desc}</p>
-                <div className="flex items-center gap-7">
+                <div className="flex items-center justify-between lg:mt-4">
                     <div className="flex ml-3 mt-7 gap-7">
                         <SkillsIcon Icon={TbBrandHtml5} style={'scale-[3] mx-auto'}styleChild={'mt-5'}></SkillsIcon>
                         <SkillsIcon Icon={TbBrandCss3} style={'scale-[3] mx-auto'}styleChild={'mt-5'}></SkillsIcon>
                         <SkillsIcon Icon={TbBrandJavascript} style={'scale-[3] mx-auto'} styleChild={'mt-5 -ml-2'}></SkillsIcon>
                         <SkillsIcon Icon={TbBrandTailwind} style={'scale-[3] mx-auto'}styleChild={'mt-5'}></SkillsIcon>
-                        <SkillsIcon Icon={TbBrandReact} style={'scale-[3] mx-auto'}styleChild={'mt-5'}></SkillsIcon>
+                        {tech == 'react' && <SkillsIcon Icon={TbBrandReact} style={'scale-[3] mx-auto'}styleChild={'mt-5'}></SkillsIcon>}
                     </div>
                     <div className="flex gap-2 mt-2">
                         <a href={github}>

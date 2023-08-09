@@ -12,13 +12,13 @@ const Navbar = () => {
 
     return ( 
         <div className={``} id='about'>
-            <div className="fixed top-0 z-30 flex items-center justify-between w-full h-16 py-2 shadow-lg shadow-[rgba(0,0,0,.1)] transition-all ease-in-out duration-500 dark:bg-color-one dark:text-color-four bg-color-four text-color-one dark:shadow-[rgba(255,255,255,0.04)]">
+            <div className="fixed top-0 z-30 flex items-center justify-between w-full h-16 py-2 shadow-lg shadow-[rgba(0,0,0,.1)] transition-all ease-in-out duration-500 dark:bg-color-one dark:text-color-four bg-color-four text-color-one dark:shadow-[rgba(255,255,255,0.04)] lg:px-20">
                 <div className="relative z-30 flex items-center gap-4 ml-5 cursor-pointer">
                     <FaLaptopCode className='scale-[1.7] hover:scale-[1.8] drop-shadow-md'/>
                     <h1 className="text-2xl font-bold drop-shadow-md"><a href="/">Ikhwan Dev</a></h1>
                 </div>
                 <div className="mr-2 scale-[.8] lg:hidden hover:text-color-two relative z-30">
-                    <label className="scale-125 bg-transparent border-none dark:text-color-four btn btn-circle swap swap-rotate text-color-one">  
+                    <label className="scale-125 bg-transparent border-none dark:text-color-four dark:hover:bg-color-two btn btn-circle swap swap-rotate text-color-one">  
                         {/* this hidden checkbox controls the state */}
                         <input type="checkbox" onChange={handleToggleMenu} checked={isChecked}/>
                         {/* hamburger icon */}
@@ -28,13 +28,13 @@ const Navbar = () => {
                     </label>
                 </div>
             </div>
-            <div className={`fixed w-full pt-5 pb-8 leading-9 text-center bg-color-four shadow-md ${isOpen?'top-16':'-top-64'} text-color-one transition-all ease-in-out duration-500 z-10 dark:bg-color-one dark:text-color-four`}>
-                <ul>
-                    <li><a href="#about" className='text-xl font-bold hover:text-color-two' onClick={handleToggleMenu}>About</a></li>
-                    <li><a href="#skills" className='text-xl font-bold hover:text-color-two' onClick={handleToggleMenu}>Skills</a></li>
-                    <li><a href="#portofolio" className='text-xl font-bold hover:text-color-two' onClick={handleToggleMenu}>Portofolio</a></li>
-                    <li><a href="#contact" className='text-xl font-bold hover:text-color-two' onClick={handleToggleMenu}>Contact</a></li>
-                    <button className='px-5 py-2 mt-2 text-lg font-bold rounded-full bg-color-tree text-color-four'>Hire me</button>
+            <div className={`fixed w-full pt-5 pb-8 leading-9 text-center bg-color-four shadow-md ${isOpen?'top-16':'-top-64'} lg:-top-2 lg:shadow-none lg:z-30 lg:left-96 lg:ml-44 lg:pb-0 text-color-one transition-all ease-in-out duration-500 z-10 dark:bg-color-one dark:text-color-four`}>
+                <ul className='lg:flex lg:gap-10 lg:items-center'>
+                    <li><a href="#about" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={handleToggleMenu}>About</a></li>
+                    <li><a href="#skills" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={handleToggleMenu}>Skills</a></li>
+                    <li><a href="#portofolio" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={handleToggleMenu}>Portofolio</a></li>
+                    <li><a href="#contact" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={handleToggleMenu}>Contact</a></li>
+                    <button className='px-5 py-2 mt-2 text-lg font-bold rounded-full lg:mt-0 bg-color-tree text-color-four hover:bg-[#308a8e]'>Hire me</button>
                 </ul>
             </div>
         </div>

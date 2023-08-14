@@ -1,7 +1,7 @@
 import {TbBrandTelegram, TbBrandYoutube, TbBrandLinkedin, TbBrandTiktok, TbBrandGithub, TbHeartFilled} from "react-icons/tb"
 import MedsosIcon from "../components/MedsosIcon";
 import {AiOutlineMail} from 'react-icons/ai'
-import coffe from '../../public/img/coffe.gif'
+import coffe from '../../public/img/coffe.png'
 
 const Contact = () => {
 
@@ -27,8 +27,8 @@ const Contact = () => {
                     <MedsosIcon Icon={TbBrandGithub}  hover={'hover:bg-[#100] hover:text-color-four hover:border-black'}/>
                 </div>
             </div>
-            <div className="hidden lg:block lg:absolute lg:top-32 lg:right-44">
-                <img src={coffe} alt="coffe" className="w-64"/>
+            <div className="hidden lg:block lg:absolute lg:top-32 lg:mt-3 lg:right-24">
+                <img src={coffe} alt="coffe" className=" w-[400px]"/>
             </div>
             <div className="">
                 <p className="flex items-center justify-center gap-1 mt-10">Made with <TbHeartFilled className="text-red-600 animate-pulse"/>by <a href="" className="hover:underline hover:text-blue-500">Ikhwan Dev</a></p>

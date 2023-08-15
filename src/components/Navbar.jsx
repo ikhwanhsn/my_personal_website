@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import {FaLaptopCode} from 'react-icons/fa';
-import ScrollSpy from "react-ui-scrollspy";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -36,10 +35,6 @@ const Navbar = () => {
                     </label>
                 </div>
             </div>
-            <ScrollSpy
-                items={['about', 'skills', 'portfolio', 'contact']}
-                currentClassName="is-active"
-            ></ScrollSpy>
             <div className={`fixed w-full pt-5 pb-8 leading-9 text-center bg-color-four shadow-md ${isOpen?'top-16':'-top-64'} lg:-top-2 lg:shadow-none lg:z-30 lg:left-96 lg:ml-44 lg:pb-0 text-color-one transition-all ease-in-out duration-500 z-10 dark:bg-color-one dark:text-color-four`}>
                 <ul className='lg:flex lg:gap-10 lg:items-center'>
                     <li><a data-to-scrollspy-id="about" href="#about" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={() => handleActiveLink(1)}>About</a></li>

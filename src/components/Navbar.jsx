@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {FaLaptopCode} from 'react-icons/fa';
+import ScrollSpy from "react-ui-scrollspy";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isChecked, setIsChecked] = useState("");
-    const [activeLink, setactiveLink] = useState(1);
+    const [activeLink, setActiveLink] = useState(1);
 
     const handleToggleMenu = () => {
         setIsOpen(!isOpen);
@@ -14,7 +15,7 @@ const Navbar = () => {
     const handleActiveLink = (num) => {
         setIsOpen(!isOpen);
         setIsChecked(!isChecked);
-        setactiveLink(num);
+        setActiveLink(num);
     };
 
     return ( 
@@ -35,12 +36,16 @@ const Navbar = () => {
                     </label>
                 </div>
             </div>
+            <ScrollSpy
+                items={['about', 'skills', 'portfolio', 'contact']}
+                currentClassName="is-active"
+            ></ScrollSpy>
             <div className={`fixed w-full pt-5 pb-8 leading-9 text-center bg-color-four shadow-md ${isOpen?'top-16':'-top-64'} lg:-top-2 lg:shadow-none lg:z-30 lg:left-96 lg:ml-44 lg:pb-0 text-color-one transition-all ease-in-out duration-500 z-10 dark:bg-color-one dark:text-color-four`}>
                 <ul className='lg:flex lg:gap-10 lg:items-center'>
-                    <li><a href="#about" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={() => handleActiveLink(1)}>About</a></li>
-                    <li><a href="#skills" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={() => handleActiveLink(2)}>Skills</a></li>
-                    <li><a href="#portofolio" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={() => handleActiveLink(3)}>Portofolio</a></li>
-                    <li><a href="#contact" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={() => handleActiveLink(4)}>Contact</a></li>
+                    <li><a data-to-scrollspy-id="about" href="#about" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={() => handleActiveLink(1)}>About</a></li>
+                    <li><a data-to-scrollspy-id="skills" href="#skills" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={() => handleActiveLink(2)}>Skills</a></li>
+                    <li><a data-to-scrollspy-id="portofolio" href="#portofolio" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={() => handleActiveLink(3)}>Portofolio</a></li>
+                    <li><a data-to-scrollspy-id="contact" href="#contact" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={() => handleActiveLink(4)}>Contact</a></li>
                     <button className='px-5 py-2 mt-2 text-lg font-bold rounded-full lg:mt-0 bg-color-tree text-color-four hover:bg-[#308a8e]'>Hire me</button>
                 </ul>
                 <div className={`hidden lg:block h-1 -mt-2 dark:bg-color-four bg-color-one transition-all duration-500 ease-in-out ${activeLink === 1 && 'w-[60px]'} ${activeLink === 2 && 'translate-x-[100px] w-[46px]'} ${activeLink === 3 && 'w-[95px] translate-x-[188px]'} ${activeLink === 4 && 'w-[72px] translate-x-[323px]'}`} id='activeLink'></div>

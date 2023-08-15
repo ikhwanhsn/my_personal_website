@@ -9,17 +9,17 @@ const PortofolioDesc = ({title, desc, github, live, tech}) => {
                 <p className="w-full h-32">{desc}</p>
                 <div className="flex items-center justify-between lg:mt-4">
                     <div className="flex ml-3 mt-7 gap-7">
-                        <SkillsIcon Icon={TbBrandHtml5} style={'scale-[3] mx-auto'}styleChild={'mt-5'}></SkillsIcon>
-                        <SkillsIcon Icon={TbBrandCss3} style={'scale-[3] mx-auto'}styleChild={'mt-5'}></SkillsIcon>
+                        {/* <SkillsIcon Icon={TbBrandHtml5} style={'scale-[3] mx-auto'}styleChild={'mt-5'}></SkillsIcon>
+                        <SkillsIcon Icon={TbBrandCss3} style={'scale-[3] mx-auto'}styleChild={'mt-5'}></SkillsIcon> */}
                         <SkillsIcon Icon={TbBrandJavascript} style={'scale-[3] mx-auto'} styleChild={'mt-5 -ml-2'}></SkillsIcon>
                         <SkillsIcon Icon={TbBrandTailwind} style={'scale-[3] mx-auto'}styleChild={'mt-5'}></SkillsIcon>
                         {tech == 'react' && <SkillsIcon Icon={TbBrandReact} style={'scale-[3] mx-auto'}styleChild={'mt-5'}></SkillsIcon>}
                     </div>
                     <div className="flex gap-2 mt-2">
-                        <a href={github}>
+                        <a href={github} target="_blank">
                             <button className="w-12 h-12 transition-all duration-500 ease-in-out border-2 rounded-lg border-color-one text-color-one hover:bg-color-one hover:text-color-four dark:border-color-four dark:text-color-four dark:hover:bg-color-four dark:hover:text-color-one dark:hover:border-color-four"><TbBrandGithub className="mx-auto scale-125"/></button>
                         </a>
-                        <a href={live}>
+                        <a href={live} target="_blank">
                             <button className="w-12 h-12 transition-all duration-500 ease-in-out border-2 rounded-lg border-color-one text-color-one hover:bg-color-tree hover:border-color-tree hover:text-color-four dark:border-color-four dark:text-color-four"><TbArrowUpRight className="mx-auto scale-150"/></button>
                         </a>
                     </div>

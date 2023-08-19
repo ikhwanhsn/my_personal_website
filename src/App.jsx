@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className={`w-full h-full bg-color-four ${isDark && 'dark'}`}>
-      <div className="dark-mode fixed z-40 scale-[.7] top-0 right-12 mr-1 lg:right-24 rounded-full text-color-one transition-all dark:text-color-four mt-3">
+      <div className="dark-mode fixed z-40 scale-[.7] top-0 right-12 mr-1 lg:left-[1110px] rounded-full text-color-one transition-all dark:text-color-four mt-3">
           <label className="swap swap-rotate drop-shadow-lg">
               {/* this hidden checkbox controls the state */}
               <input type="checkbox" onClick={handleDarkMode}/>

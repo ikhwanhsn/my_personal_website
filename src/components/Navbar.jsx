@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {FaLaptopCode} from 'react-icons/fa';
 import * as Scroll from 'react-scroll';
+import myCV from '../../public/myCV.pdf'
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const Navbar = () => {
@@ -70,7 +71,20 @@ const Navbar = () => {
                     <li><a data-to-scrollspy-id="skills" href="#skills" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={() => handleActiveLink(2)}>Skills</a></li>
                     <li><a data-to-scrollspy-id="portofolio" href="#portofolio" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={() => handleActiveLink(3)}>Portofolio</a></li>
                     <li><a data-to-scrollspy-id="contact" href="#contact" className='text-xl font-bold dark:hover:text-gray-400 hover:text-gray-500' onClick={() => handleActiveLink(4)}>Contact</a></li> */}
-                    <button className='px-5 py-2 mt-2 text-lg font-bold rounded-full lg:mt-0 bg-color-tree text-color-four hover:bg-[#308a8e]'>Hire me</button>
+                    {/* <button className='px-5 py-2 mt-2 text-lg font-bold rounded-full lg:mt-0 bg-color-tree text-color-four hover:bg-[#308a8e]'>Hire me</button> */}
+                    {/* You can open the modal using ID.showModal() method */}
+                    <button className="px-5 py-2 mt-2 text-lg font-bold rounded-full lg:mt-0 bg-color-tree text-color-four hover:bg-[#308a8e]" onClick={()=>window.my_modal_9.showModal()}>Hire me</button>
+                    <dialog id="my_modal_9" className="modal">
+                    <form method="dialog" className="modal-box dark:bg-color-one">
+                        <button className="absolute btn btn-sm btn-circle btn-ghost right-2 top-2">✕</button>
+                        <a href={myCV} download={'CV Ikhwanul Husna'}>
+                            <p className='w-full py-2 mt-5 text-white rounded-md bg-color-tree hover:bg-cyan-600'>Download CV</p>
+                        </a>
+                        <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=ikhwanulhusna111@gmail.com" target='_blank'>
+                            <p className='w-full py-2 mt-2 text-white rounded-md bg-color-tree hover:bg-cyan-600'>Send Email</p>
+                        </a>
+                    </form>
+                    </dialog>
                 </ul>
                 <div className={`hidden lg:block h-1 -mt-2 dark:bg-color-four bg-color-one transition-all duration-500 ease-in-out ${activeLink === 1 && 'w-[60px]'} ${activeLink === 2 && 'translate-x-[100px] w-[46px]'} ${activeLink === 3 && 'w-[95px] translate-x-[188px]'} ${activeLink === 4 && 'w-[72px] translate-x-[323px]'}`} id='activeLink'></div>
             </div>

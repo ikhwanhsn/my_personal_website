@@ -47,22 +47,22 @@ const Navbar = () => {
             </div>
             <div className={`fixed w-full pt-5 pb-8 leading-9 text-center bg-color-four shadow-md ${isOpen?'top-16':'-top-64'} lg:-top-2 lg:shadow-none lg:z-30 lg:left-96 lg:ml-44 lg:pb-0 text-color-one transition-all ease-in-out duration-500 z-10 dark:bg-color-one dark:text-color-four`}>
                 <ul className='lg:flex lg:gap-10 lg:items-center'>
-                    <li className='text-xl font-bold cursor-pointer dark:hover:text-gray-400 hover:text-gray-500'>
+                    <li className='mb-2 text-xl font-bold cursor-pointer dark:hover:text-gray-400 hover:text-gray-500'>
                         <Link activeClass="active" smooth spy={true} to="about" duration={0} onClick={() => handleActiveLink(1)} onSetActive={handleSetActive}>
                             About
                         </Link>
                     </li>
-                    <li className='text-xl font-bold cursor-pointer dark:hover:text-gray-400 hover:text-gray-500'>
+                    <li className='mb-2 text-xl font-bold cursor-pointer dark:hover:text-gray-400 hover:text-gray-500'>
                         <Link activeClass="active" smooth spy={true} to="skills" duration={0} onClick={() => handleActiveLink(2)} onSetActive={handleSetActive}>
                             Skills
                         </Link>
                     </li>
-                    <li className='text-xl font-bold cursor-pointer dark:hover:text-gray-400 hover:text-gray-500'>
+                    <li className='mb-2 text-xl font-bold cursor-pointer dark:hover:text-gray-400 hover:text-gray-500'>
                         <Link activeClass="active" smooth spy={true} to="portofolio" duration={0} onClick={() => handleActiveLink(3)} onSetActive={handleSetActive}>
                             Portofolio
                         </Link>
                     </li>
-                    <li className='text-xl font-bold cursor-pointer dark:hover:text-gray-400 hover:text-gray-500'>
+                    <li className='mb-2 text-xl font-bold cursor-pointer dark:hover:text-gray-400 hover:text-gray-500'>
                         <Link activeClass="active" smooth spy={true} to="contact" duration={0} onClick={() => handleActiveLink(4)} onSetActive={handleSetActive}>
                             Contact
                         </Link>

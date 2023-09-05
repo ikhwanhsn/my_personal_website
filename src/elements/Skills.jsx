@@ -23,7 +23,7 @@ const Skills = () => {
                 </div>
             </div>
             <div className="lg:absolute lg:left-96 lg:ml-60">
-                <div className="px-7" data-aos="fade-left" data-aos-delay="200" data-aos-duration="500">
+                <div className="px-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
                     <h3 className='mt-5 text-xl font-bold text-left'>Experience :</h3>
                     <ol className='mt-2 leading-8 text-left'>
                         <SkillsExperience title={'Edspert Id Bootcamp (React JS)'} src={react1} date={'23-07-2023'} desc={'This comprehensive online course offered by Edspert.id is designed to equip you with the essential skills to create an impressive portfolio website using React JS.'} click={()=>window.my_modal_1.showModal()} modal={1}/>
@@ -32,7 +32,7 @@ const Skills = () => {
                         <SkillsExperience title={'Baparekraf Kominfo (Web Developer)'} src={''} date={'21-06-2023'} desc={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis magnam architecto odio cassumenda!'} modal={4}/>
                     </ol>
                 </div>
-                <div className="px-7" data-aos="fade-left" data-aos-delay="100" data-aos-duration="500">
+                <div className="px-7" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
                     <h3 className='mt-3 text-xl font-bold text-left'>Language :</h3>
                     <ul className='mt-2 leading-8 text-left'>
                         <li><GiConfirmed className='inline-block text-green-600'/> Indonesian (Native)</li>

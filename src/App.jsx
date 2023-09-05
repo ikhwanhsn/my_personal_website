@@ -1,9 +1,11 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Navbar from "./components/Navbar"
 import About from "./elements/About"
 import Contact from "./elements/Contact"
 import Portofolio from "./elements/Portofolio"
 import Skills from "./elements/Skills"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -11,6 +13,10 @@ function App() {
   const handleDarkMode = () => {
       setIsDark(!isDark);
   }
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <div className={`w-full h-full bg-color-four ${isDark && 'dark'}`}>

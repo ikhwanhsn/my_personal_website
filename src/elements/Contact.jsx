@@ -41,7 +41,7 @@ const Contact = () => {
 
     return ( 
         <div className="pt-24 pb-5 text-center transition-all duration-500 ease-in-out lg:relative lg:pt-8 text-color-one px-7 lg:px-24 dark:bg-color-one dark:text-color-four lg:clear-both" id="contact">
-            <div className="relative lg:w-1/2">
+            <div className="relative lg:w-1/2" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
                 <h1 className="text-4xl font-bold drop-shadow-lg lg:hidden">My Contact</h1>
                 <h2 className='text-3xl font-bold text-left mt-14'>Have Coffe with Me?</h2>
                 <h2 className='mt-1 text-lg font-bold text-left'>Let's create something new and powerful</h2>
@@ -63,7 +63,7 @@ const Contact = () => {
                     <MedsosIcon Icon={TbBrandGithub}  hover={'hover:bg-[#100] hover:text-color-four hover:border-black'} link={'https://github.com/ikhwanhsn'}/>
                 </div>
             </div>
-            <div className="hidden lg:block lg:absolute lg:top-32 lg:mt-3 lg:right-24">
+            <div className="hidden lg:block lg:absolute lg:top-32 lg:mt-3 lg:right-24" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
                 <img src={coffe} alt="coffe" className=" w-[400px]"/>
             </div>
             <div className="">

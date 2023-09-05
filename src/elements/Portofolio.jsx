@@ -10,8 +10,8 @@ const Portofolio = () => {
     return ( 
         <div className="h-full text-center transition-all duration-500 ease-in-out lg:h-screen pt-28 lg:px-24 text-color-one px-7 dark:bg-color-one dark:text-color-four lg:dark:bg-color-one" id="portofolio">
             <div className="">
-                <h1 className="text-4xl font-bold drop-shadow-lg lg:absolute lg:mt-7 lg:-right-1 lg:mr-96">My Portofolio</h1>
-                <div className="shadow-lg mt-9 shadow-[rgba(0,0,0,.1)] lg:float-left lg:relative lg:w-[500px] lg:h-80">
+                <h1 className="text-4xl font-bold drop-shadow-lg lg:absolute lg:mt-7 lg:-right-1 lg:mr-96"  data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">My Portofolio</h1>
+                <div className="shadow-lg mt-9 shadow-[rgba(0,0,0,.1)] lg:float-left lg:relative lg:w-[500px] lg:h-80" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="50">
                     <Splide aria-label="My Portofolio" options={ {rewind: true, rewindSpeed:1000} } onMove={(e, d) => setSlideActive(d) }>
                         {dataImage?.map((item, id) => {
                             return <SplideSlide key={id}>

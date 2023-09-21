@@ -8,9 +8,9 @@ const SkillsExperience = ({title, date, src, desc,modal, click}) => {
         <div className="">
             <li><GiConfirmed className='inline-block text-green-600'/> {title} <button href="" className='text-blue-600 hover:underline dark:text-blue-500' onClick={click}>details</button></li>
             <dialog id={`my_modal_${modal}`} className="modal">
-                <form method="dialog" className="overflow-hidden shadow-md modal-box bg-color-four dark:bg-color-one">
+                <form method="dialog" className={`overflow-hidden shadow-md modal-box bg-color-four dark:bg-color-one ${modal === 4 && 'overflow-scroll' }`}>
                     <button className="absolute font-bold shadow-sm btn btn-sm btn-circle btn-ghost right-2 top-2 text-color-one bg-color-four dark:bg-color-one dark:hover:bg-color-two dark:text-color-four hover:bg-[#ddd]">✕</button>
-                    <img src={src} alt="porto" className='w-full rounded-md h-52 lg:h-80'/>
+                    <img src={src} alt="porto" className={`w-full rounded-md h-52 lg:h-80 ${modal === 4 && 'h-full lg:h-full' }`}/>
                     {/* <div className="shadow-lg mt-9 shadow-[rgba(0,0,0,.1)]">
                         <Splide aria-label="My Experience" options={ {rewind: true, rewindSpeed:1000, speed:800} }>
                             <SplideSlide>

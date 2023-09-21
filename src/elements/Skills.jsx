@@ -5,6 +5,7 @@ import fullstack1 from '../../public/img/fullstack1.webp'
 import dicoding1 from '../../public/img/dicoding1.webp'
 import react1 from '../../public/img/react1.webp'
 import SkillsExperience from '../components/SkillsExperience';
+import dryCode from '../../public/img/dryCode.png'
 
 const Skills = () => {
     return ( 
@@ -26,10 +27,10 @@ const Skills = () => {
                 <div className="px-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
                     <h3 className='mt-5 text-xl font-bold text-left'>Experience :</h3>
                     <ol className='mt-2 leading-8 text-left'>
+                        <SkillsExperience title={'Dry Code Internship (India)'} src={dryCode} date={'01-09-2023'} desc={'Internship in Indian Company as a web developer and build project quiz web app using React JS and Tailwind.'} click={()=>window.my_modal_4.showModal()} modal={4}/>
                         <SkillsExperience title={'Edspert Id Bootcamp (React JS)'} src={react1} date={'23-07-2023'} desc={'This comprehensive online course offered by Edspert.id is designed to equip you with the essential skills to create an impressive portfolio website using React JS.'} click={()=>window.my_modal_1.showModal()} modal={1}/>
                         <SkillsExperience title={'Kelas Fullstack Id (Fullstack Dev)'} src={fullstack1} date={'18-05-2023'} desc={'This comprehensive online program is thoughtfully designed to equip you with the skills and knowledge necessary to become a versatile Fullstack Developer.'} click={()=>window.my_modal_2.showModal()} modal={2}/>
                         <SkillsExperience title={'Dicoding Academy (Javascript)'} src={dicoding1} date={'09-07-2022'} desc={'This course provides a comprehensive learning experience, focusing on the latest web development technologies and industry best practices.'} click={()=>window.my_modal_3.showModal()} modal={3}/>
-                        <SkillsExperience title={'Baparekraf Kominfo (Web Developer)'} src={''} date={'21-06-2023'} desc={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis magnam architecto odio cassumenda!'} modal={4}/>
                     </ol>
                 </div>
                 <div className="px-7" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">

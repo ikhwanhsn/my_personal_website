@@ -6,7 +6,7 @@ const PortofolioDesc = ({title, desc, github, live, tech}) => {
         <div className="">
             <div className={`flex flex-col mt-9 text-left lg:w-1/2 lg:float-right lg:pl-5 lg:mt-28 lg:pr-3`}>
                 <h2 className="mb-2 text-2xl font-bold" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">{title}</h2>
-                <p className="w-full h-32" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">{desc}</p>
+                <p className="w-full h-32 overflow-hidden" data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="100">{desc}</p>
                 <div className="flex items-center justify-between lg:mt-4">
                     <div className="flex ml-3 mt-7 gap-7">
                         {/* <SkillsIcon Icon={TbBrandHtml5} style={'scale-[3] mx-auto'}styleChild={'mt-5'}></SkillsIcon>

@@ -5,7 +5,7 @@ import fullstack1 from '../../public/img/fullstack1.webp'
 import dicoding1 from '../../public/img/dicoding1.webp'
 import react1 from '../../public/img/react1.webp'
 import SkillsExperience from '../components/SkillsExperience';
-import dryCode from '../../public/img/dryCode.png'
+import dryCode from '../../public/img/dryCode.webp'
 
 const Skills = () => {
     return ( 

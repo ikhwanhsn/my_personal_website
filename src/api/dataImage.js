@@ -1,8 +1,8 @@
 import porto1 from '../../public/img/porto1.webp';
-import realEstate from '../../public/img/realEstate.png'
-import nft from '../../public/img/nft.png'
-import edspert from '../../public/img/edspert.png'
-import digitalCalc from '../../public/img/digitalCalc.jpg'
+import realEstate from '../../public/img/realEstate.webp'
+import nft from '../../public/img/nft.webp'
+import edspert from '../../public/img/edspert.webp'
+import digitalCalc from '../../public/img/digitalCalc.webp'
 
 const dataImage = [
     {

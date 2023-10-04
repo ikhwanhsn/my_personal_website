@@ -1,4 +1,4 @@
-import profil from '../../public/img/profil.png';
+import profil from '../../public/img/profil.webp';
 import { AutoTyping } from '../components/AutoTyping';
 import * as Scroll from 'react-scroll';
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'

@@ -1,7 +1,7 @@
 import {TbBrandTelegram, TbBrandYoutube, TbBrandLinkedin, TbBrandTiktok, TbBrandGithub, TbHeartFilled} from "react-icons/tb"
 import MedsosIcon from "../components/MedsosIcon";
 import {AiOutlineMail} from 'react-icons/ai'
-import coffe from '../../public/img/coffe.png'
+import coffe from '../../public/img/coffe.webp'
 import Swal from 'sweetalert2'
 import {useState} from 'react'
 

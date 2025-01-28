@@ -1,6 +1,5 @@
 import {
   TbBrandTelegram,
-  TbBrandYoutube,
   TbBrandLinkedin,
   TbBrandTiktok,
   TbBrandGithub,
@@ -11,29 +10,21 @@ import MedsosIcon from "../components/MedsosIcon";
 import { AiOutlineMail } from "react-icons/ai";
 import coffe from "../../public/img/coffe.webp";
 import Swal from "sweetalert2";
-import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 const Contact = () => {
-  const [inputEmail, setInputEmail] = useState("");
-  const [inputMessage, setInputMessage] = useState("");
-
-  const sendMessage = (e) => {
-    if (inputEmail == "" || inputMessage == "") {
-      e.preventDefault();
-      Swal.fire("Error Message!", "Please Input Your Email & Message", "error");
-      return;
-    }
-
-    if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(inputEmail)) {
-      e.preventDefault();
-      Swal.fire("Error Message!", "Your Email is Wrong!!!", "error");
-      return;
-    }
-    e.preventDefault();
-    Swal.fire("Good job!", "Send Message Successfully!", "success");
-    setInputEmail("");
-    setInputMessage("");
-  };
+  const [state, handleSubmit] = useForm("mkgorwnv");
+  if (state.succeeded) {
+    Swal.fire(
+      "Send Message Successfully!",
+      "Thank for contact us, have a nice day!",
+      "success"
+    );
+    const email = document.querySelector("input[name=email]");
+    const message = document.querySelector("textarea[name=message]");
+    email.value = "";
+    message.value = "";
+  }
 
   return (
     <div
@@ -55,28 +46,30 @@ const Contact = () => {
         <h2 className="mt-1 text-lg font-bold text-left">
           Let's create something new and powerful
         </h2>
-        <form action="">
+        <form onSubmit={handleSubmit}>
           <input
             type="email"
-            name=""
-            id=""
+            name="email"
             placeholder="Email..."
             className="w-full h-full p-3 mt-3 border-2 rounded-md shadow-sm transition-all duration-500 ease-in-out placeholder:transition-all placeholder:duration-500 placeholder:ease-in-out text-color-one placeholder:text-color-one focus:border-color-one focus:outline-none border-color-one bg-color-four shadow-[rgba(0,0,0,.2)] dark:bg-color-one dark:border-color-four dark:text-color-four dark:placeholder:text-color-four"
-            onChange={(e) => setInputEmail(e.target.value)}
-            value={inputEmail}
           />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
           <textarea
-            name=""
-            id=""
+            name="message"
+            id="message"
             className="w-full h-40 p-3 mt-3 border-2 rounded-md shadow-sm transition-all duration-500 ease-in-out placeholder:transition-all placeholder:duration-500 placeholder:ease-in-out text-color-one placeholder:text-color-one focus:border-color-one focus:outline-none border-color-one bg-color-four shadow-[rgba(0,0,0,.2)] dark:bg-color-one dark:border-color-four dark:text-color-four dark:placeholder:text-color-four"
             placeholder="Your message..."
-            onChange={(e) => setInputMessage(e.target.value)}
-            value={inputMessage}
           ></textarea>
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
           <div className="flex w-full gap-2 mt-1">
             <button
               className="w-1/2 py-2 font-bold transition-all duration-500 ease-in-out rounded-md hover:bg-color-one bg-color-two text-color-four dark:bg-color-four dark:text-color-one dark:hover:bg-[#ddd]"
-              onClick={sendMessage}
+              type="submit"
+              disabled={state.submitting}
             >
               Send
             </button>

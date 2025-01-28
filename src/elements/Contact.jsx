@@ -11,20 +11,31 @@ import { AiOutlineMail } from "react-icons/ai";
 import coffe from "../../public/img/coffe.webp";
 import Swal from "sweetalert2";
 import { useForm, ValidationError } from "@formspree/react";
+import { useEffect, useState } from "react";
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("mkgorwnv");
-  if (state.succeeded) {
-    Swal.fire(
-      "Send Message Successfully!",
-      "Thank for contact us, have a nice day!",
-      "success"
-    );
-    const email = document.querySelector("input[name=email]");
-    const message = document.querySelector("textarea[name=message]");
-    email.value = "";
-    message.value = "";
-  }
+  const [showedAlert, setShowedAlert] = useState(false);
+
+  useEffect(() => {
+    if (state.succeeded && !showedAlert) {
+      Swal.fire(
+        "Send Message Successfully",
+        "Thank for contact us, have a nice day :)",
+        "success"
+      );
+      setShowedAlert(true);
+      const email = document.querySelector("input[name=email]");
+      const message = document.querySelector("textarea[name=message]");
+      if (email) email.value = "";
+      if (message) message.value = "";
+    }
+  }, [state.succeeded, showedAlert]);
+  useEffect(() => {
+    if (!state.submitting && showedAlert) {
+      setShowedAlert(false);
+    }
+  }, [state.submitting]);
 
   return (
     <div
